@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>vry_omedia — Short-Form Video Editing</title>
+
   <meta
     name="description"
-    content="vry_omedia turns your content into scroll-stopping short-form videos."
+    content="vry_omedia turns your content into scroll-stopping short-form videos for TikTok, Instagram Reels and YouTube Shorts."
   >
 
   <style>
@@ -52,13 +53,14 @@
 
       padding: 22px 7%;
 
-      background: rgba(5, 5, 5, 0.65);
-      backdrop-filter: blur(15px);
+      background: rgba(5, 5, 5, 0.72);
+      backdrop-filter: blur(18px);
+
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .logo {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 900;
       letter-spacing: -1px;
     }
@@ -91,117 +93,223 @@
       font-weight: 700;
     }
 
+    .nav-button:hover {
+      transform: translateY(-2px);
+    }
+
+
     /* =========================
        HERO
     ========================= */
 
     .hero {
       min-height: 100vh;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       text-align: center;
 
       position: relative;
-      padding: 140px 7% 80px;
+
+      padding: 150px 7% 100px;
+
       overflow: hidden;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
-      width: 700px;
-      height: 700px;
+
+      width: 750px;
+      height: 750px;
+
       background: #7c3aed;
-      filter: blur(180px);
-      opacity: 0.18;
-      top: -300px;
+
+      filter: blur(190px);
+
+      opacity: 0.16;
+
+      top: -330px;
       left: 50%;
+
       transform: translateX(-50%);
     }
 
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+
+      background: #4f46e5;
+
+      filter: blur(180px);
+
+      opacity: 0.08;
+
+      bottom: -250px;
+      right: -100px;
+    }
+
     .hero-content {
-      max-width: 900px;
+      max-width: 1000px;
+
       position: relative;
+
       z-index: 2;
     }
 
     .badge {
-      display: inline-block;
-      padding: 8px 15px;
-      border: 1px solid rgba(139,92,246,0.4);
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 16px;
+
+      border: 1px solid rgba(139,92,246,0.35);
+
       background: rgba(139,92,246,0.08);
+
       color: #c4b5fd;
+
       border-radius: 50px;
-      font-size: 0.8rem;
-      margin-bottom: 25px;
+
+      font-size: 0.75rem;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 28px;
+    }
+
+    .badge::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      background: #8b5cf6;
+
+      border-radius: 50%;
+
+      box-shadow: 0 0 12px #8b5cf6;
     }
 
     .hero h1 {
-      font-size: clamp(3.3rem, 8vw, 7rem);
-      line-height: 0.95;
-      letter-spacing: -5px;
+      font-size: clamp(3.5rem, 8vw, 7.5rem);
+
+      line-height: 0.92;
+
+      letter-spacing: -6px;
+
       font-weight: 900;
+
       margin-bottom: 30px;
     }
 
     .gradient-text {
+      display: block;
+
       background: linear-gradient(
         90deg,
-        #a78bfa,
+        #c4b5fd,
         #8b5cf6,
         #6366f1
       );
 
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 680px;
+
       margin: auto;
+
       color: #999;
+
       font-size: 1.1rem;
-      line-height: 1.7;
+
+      line-height: 1.8;
     }
 
     .hero-buttons {
-      margin-top: 35px;
+      margin-top: 38px;
+
       display: flex;
+
       justify-content: center;
+
       gap: 15px;
+
       flex-wrap: wrap;
     }
 
     .button {
-      padding: 14px 22px;
+      display: inline-block;
+
+      padding: 14px 23px;
+
       border-radius: 9px;
+
       font-weight: 700;
+
       transition: 0.3s;
     }
 
     .button-primary {
       background: #fff;
+
       color: #000;
     }
 
     .button-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255,255,255,0.15);
+
+      box-shadow:
+        0 10px 35px rgba(255,255,255,0.13);
     }
 
     .button-secondary {
       border: 1px solid #333;
+
       color: #ddd;
     }
 
     .button-secondary:hover {
       border-color: #666;
+
       background: #111;
+
+      transform: translateY(-3px);
     }
 
+    .hero-trust {
+      margin-top: 50px;
+
+      color: #666;
+
+      font-size: 0.8rem;
+
+      letter-spacing: 0.5px;
+    }
+
+    .hero-trust strong {
+      color: #aaa;
+    }
+
+
     /* =========================
-       SECTIONS
+       GENERAL SECTIONS
     ========================= */
 
     section {
@@ -209,29 +317,39 @@
     }
 
     .section-heading {
-      max-width: 650px;
+      max-width: 680px;
+
       margin-bottom: 55px;
     }
 
     .section-heading span {
       color: #8b5cf6;
+
       font-size: 0.8rem;
+
       font-weight: 800;
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
     }
 
     .section-heading h2 {
       font-size: clamp(2.3rem, 5vw, 4rem);
+
       letter-spacing: -2px;
+
       margin-top: 10px;
     }
 
     .section-heading p {
       color: #888;
+
       line-height: 1.7;
+
       margin-top: 15px;
     }
+
 
     /* =========================
        SERVICES
@@ -239,50 +357,152 @@
 
     .services {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .service-card {
       background: #0b0b0b;
+
       border: 1px solid #1b1b1b;
+
       padding: 30px;
+
       border-radius: 16px;
+
       transition: 0.3s;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-7px);
+
       border-color: #49318a;
+
       background: #0e0e0e;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.3);
     }
 
     .service-number {
       color: #8b5cf6;
+
       font-weight: 800;
+
       margin-bottom: 30px;
     }
 
     .service-card h3 {
       font-size: 1.3rem;
+
       margin-bottom: 12px;
     }
 
     .service-card p {
       color: #888;
+
       line-height: 1.6;
+
       font-size: 0.95rem;
     }
 
+
     /* =========================
-       PORTFOLIO / WHAT WE CAN CREATE
+       WHAT WE CAN CREATE
     ========================= */
 
-    .portfolio {
+    .create-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+
+      gap: 18px;
     }
+
+    .create-card {
+      position: relative;
+
+      background: linear-gradient(
+        145deg,
+        #101010,
+        #080808
+      );
+
+      border: 1px solid #1c1c1c;
+
+      padding: 30px;
+
+      border-radius: 16px;
+
+      min-height: 220px;
+
+      overflow: hidden;
+
+      transition: 0.3s;
+    }
+
+    .create-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      background: #7c3aed;
+
+      filter: blur(100px);
+
+      opacity: 0;
+
+      top: -80px;
+      right: -50px;
+
+      transition: 0.3s;
+    }
+
+    .create-card:hover {
+      transform: translateY(-7px);
+
+      border-color: #49318a;
+    }
+
+    .create-card:hover::before {
+      opacity: 0.15;
+    }
+
+    .create-number {
+      position: relative;
+
+      color: #8b5cf6;
+
+      font-size: 0.8rem;
+
+      font-weight: 800;
+
+      margin-bottom: 35px;
+    }
+
+    .create-card h3 {
+      position: relative;
+
+      font-size: 1.2rem;
+
+      margin-bottom: 12px;
+    }
+
+    .create-card p {
+      position: relative;
+
+      color: #888;
+
+      font-size: 0.9rem;
+
+      line-height: 1.7;
+    }
+
 
     /* =========================
        PROCESS
@@ -290,17 +510,21 @@
 
     .process {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 15px;
     }
 
     .process-item {
       padding: 25px 0;
+
       border-top: 1px solid #292929;
     }
 
     .process-item span {
       color: #8b5cf6;
+
       font-weight: 800;
     }
 
@@ -310,9 +534,12 @@
 
     .process-item p {
       color: #888;
+
       font-size: 0.9rem;
+
       line-height: 1.6;
     }
+
 
     /* =========================
        PRICING
@@ -320,20 +547,53 @@
 
     .pricing {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .price-card {
       background: #0b0b0b;
+
       border: 1px solid #1c1c1c;
+
       padding: 35px;
+
       border-radius: 18px;
+
+      transition: 0.3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #333;
     }
 
     .price-card.featured {
       border-color: #7c3aed;
-      box-shadow: 0 0 50px rgba(124,58,237,0.12);
+
+      box-shadow:
+        0 0 50px rgba(124,58,237,0.12);
+    }
+
+    .popular {
+      display: inline-block;
+
+      padding: 5px 10px;
+
+      background: rgba(139,92,246,0.12);
+
+      color: #c4b5fd;
+
+      border-radius: 20px;
+
+      font-size: 0.7rem;
+
+      font-weight: 800;
+
+      margin-bottom: 15px;
     }
 
     .price-card h3 {
@@ -342,28 +602,38 @@
 
     .price {
       font-size: 2.7rem;
+
       font-weight: 900;
+
       margin: 20px 0;
     }
 
     .price small {
       color: #777;
+
       font-size: 0.8rem;
+
       font-weight: 400;
     }
 
     .price-card ul {
       list-style: none;
+
       color: #aaa;
+
       line-height: 2.2;
+
       margin-bottom: 25px;
     }
 
     .price-card li::before {
       content: "✓";
+
       color: #8b5cf6;
+
       margin-right: 10px;
     }
+
 
     /* =========================
        CTA
@@ -371,9 +641,13 @@
 
     .cta {
       text-align: center;
-      max-width: 900px;
+
+      max-width: 950px;
+
       margin: auto;
-      padding: 100px 30px;
+
+      padding: 110px 30px;
+
       border-radius: 25px;
 
       background:
@@ -388,16 +662,22 @@
 
     .cta h2 {
       font-size: clamp(2.5rem, 6vw, 5rem);
+
       letter-spacing: -3px;
+
       margin-bottom: 20px;
     }
 
     .cta p {
       color: #888;
+
       max-width: 550px;
+
       margin: auto;
+
       line-height: 1.7;
     }
+
 
     /* =========================
        FOOTER
@@ -405,13 +685,17 @@
 
     footer {
       padding: 35px 7%;
+
       border-top: 1px solid #161616;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       color: #666;
+
       font-size: 0.85rem;
     }
 
@@ -419,75 +703,128 @@
       color: #fff;
     }
 
+
     /* =========================
-       MOBILE
+       TABLET
     ========================= */
 
-    @media (max-width: 800px) {
-
-      .nav-links a:not(.nav-button) {
-        display: none;
-      }
+    @media (max-width: 900px) {
 
       .services,
-      .portfolio,
+      .create-grid,
       .pricing {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .process {
         grid-template-columns: 1fr 1fr;
       }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 650px) {
+
+      nav {
+        padding: 18px 6%;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        padding:
+          140px 6% 90px;
+      }
 
       .hero h1 {
-        letter-spacing: -3px;
+        font-size: clamp(3rem, 15vw, 5rem);
+
+        letter-spacing: -4px;
+      }
+
+      .hero p {
+        font-size: 1rem;
       }
 
       section {
         padding: 80px 6%;
       }
 
-      footer {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-
-    @media (max-width: 500px) {
-
+      .services,
+      .create-grid,
+      .pricing,
       .process {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-left: 6%;
-        padding-right: 6%;
+      .section-heading {
+        margin-bottom: 40px;
       }
 
-      .hero p {
-        font-size: 1rem;
+      footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
   <nav>
-    <a href="#" class="logo">vry_<span>omedia</span></a>
+
+    <a href="#" class="logo">
+      vry_<span>omedia</span>
+    </a>
 
     <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-button">Get Started</a>
+
+      <a href="#work">
+        What We Create
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+      <a
+        href="https://www.instagram.com/vyr_omedia/"
+        class="nav-button"
+      >
+        Get Started
+      </a>
+
     </div>
+
   </nav>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
@@ -498,25 +835,47 @@
       </div>
 
       <h1>
+
         Make people
-        <span class="gradient-text">stop scrolling.</span>
+
+        <span class="gradient-text">
+          stop scrolling.
+        </span>
+
       </h1>
 
       <p>
+
         We turn your raw footage, podcasts and long-form content
-        into high-impact short-form videos designed for TikTok,
-        Instagram Reels and YouTube Shorts.
+        into high-impact short-form videos built to grab attention,
+        grow your brand and reach more customers.
+
       </p>
 
       <div class="hero-buttons">
 
-        <a href="#contact" class="button button-primary">
+        <a
+          href="https://www.instagram.com/vyr_omedia/"
+          class="button button-primary"
+        >
           Start a Project →
         </a>
 
-        <a href="#work" class="button button-secondary">
-          View Our Work
+        <a
+          href="#work"
+          class="button button-secondary"
+        >
+          See What We Create
         </a>
+
+      </div>
+
+      <div class="hero-trust">
+
+        Built for
+        <strong>
+          businesses, creators & personal brands.
+        </strong>
 
       </div>
 
@@ -525,301 +884,555 @@
   </section>
 
 
-  <!-- SERVICES -->
+  <!-- =========================
+       SERVICES
+  ========================= -->
 
   <section id="services">
 
     <div class="section-heading">
-      <span>What we do</span>
+
+      <span>
+        What we do
+      </span>
 
       <h2>
+
         Your content.
         <br>
         Our edit.
+
       </h2>
 
       <p>
-        Everything you need to turn raw footage into content
-        people actually want to watch.
+
+        Everything you need to turn raw footage into
+        short-form content people actually want to watch.
+
       </p>
+
     </div>
+
 
     <div class="services">
 
-      <div class="service-card">
-        <div class="service-number">01</div>
 
-        <h3>Short-Form Editing</h3>
+      <div class="service-card">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <h3>
+          Short-Form Editing
+        </h3>
 
         <p>
+
           Fast-paced edits designed specifically for TikTok,
-          Reels and YouTube Shorts.
+          Instagram Reels and YouTube Shorts.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">02</div>
 
-        <h3>Captions & Graphics</h3>
+      <div class="service-card">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <h3>
+          Captions & Graphics
+        </h3>
 
         <p>
+
           Dynamic captions, motion graphics and visual elements
           that keep viewers engaged.
+
         </p>
+
       </div>
+
 
       <div class="service-card">
-        <div class="service-number">03</div>
 
-        <h3>Hooks & Retention</h3>
+        <div class="service-number">
+          03
+        </div>
+
+        <h3>
+          Hooks & Retention
+        </h3>
 
         <p>
+
           Strong openings, tight pacing and strategic cuts
           designed to keep viewers watching.
+
         </p>
+
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- WHAT WE CAN CREATE -->
+  <!-- =========================
+       WHAT WE CAN CREATE
+  ========================= -->
 
   <section id="work">
 
     <div class="section-heading">
-      <span>What we can create</span>
+
+      <span>
+        What we can create
+      </span>
 
       <h2>
+
         Turn your content
         <br>
         into growth.
+
       </h2>
 
       <p>
-        We turn the content you already have into short-form videos
-        designed to grab attention, build your brand and reach more customers.
+
+        We turn the content you already have into short-form
+        videos designed to grab attention, build your brand
+        and reach more customers.
+
       </p>
+
     </div>
 
-    <div class="services">
 
-      <div class="service-card">
-        <div class="service-number">01</div>
+    <div class="create-grid">
 
-        <h3>Business & Promotional Clips</h3>
+
+      <div class="create-card">
+
+        <div class="create-number">
+          01
+        </div>
+
+        <h3>
+          Business & Promotional Clips
+        </h3>
 
         <p>
-          Turn your products, services, offers and announcements into
-          engaging short-form videos for social media.
+
+          Turn your products, services, offers and announcements
+          into engaging short-form videos for social media.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">02</div>
 
-        <h3>Podcast & Expert Clips</h3>
+      <div class="create-card">
+
+        <div class="create-number">
+          02
+        </div>
+
+        <h3>
+          Podcast & Expert Clips
+        </h3>
 
         <p>
-          Turn podcasts, interviews and long conversations into multiple
-          short clips that showcase your expertise.
+
+          Turn podcasts, interviews and long conversations
+          into multiple short clips that showcase your expertise.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">03</div>
 
-        <h3>Personal Brand Content</h3>
+      <div class="create-card">
+
+        <div class="create-number">
+          03
+        </div>
+
+        <h3>
+          Personal Brand Content
+        </h3>
 
         <p>
-          Turn your talking-head footage and ideas into polished Reels,
-          TikToks and Shorts that build your brand.
+
+          Turn your talking-head footage and ideas into polished
+          Reels, TikToks and Shorts that build your brand.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">04</div>
 
-        <h3>Educational Content</h3>
+      <div class="create-card">
+
+        <div class="create-number">
+          04
+        </div>
+
+        <h3>
+          Educational Content
+        </h3>
 
         <p>
-          Turn your knowledge and advice into quick, valuable videos
-          that potential customers can easily understand and share.
+
+          Turn your knowledge and advice into quick, valuable
+          videos that potential customers can easily understand.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">05</div>
 
-        <h3>Product & Service Content</h3>
+      <div class="create-card">
+
+        <div class="create-number">
+          05
+        </div>
+
+        <h3>
+          Product & Service Content
+        </h3>
 
         <p>
+
           Show people what you sell and why it matters through
           short, attention-grabbing videos.
+
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-number">06</div>
 
-        <h3>Social Media Content</h3>
+      <div class="create-card">
+
+        <div class="create-number">
+          06
+        </div>
+
+        <h3>
+          Social Media Content
+        </h3>
 
         <p>
+
           Turn one piece of long-form content into multiple clips
           so you always have content ready to post.
+
         </p>
+
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- PROCESS -->
+  <!-- =========================
+       PROCESS
+  ========================= -->
 
   <section>
 
     <div class="section-heading">
-      <span>Our process</span>
+
+      <span>
+        Our process
+      </span>
 
       <h2>
         Simple from start to finish.
       </h2>
+
     </div>
+
 
     <div class="process">
 
-      <div class="process-item">
-        <span>01</span>
-        <h3>Send Footage</h3>
-        <p>
-          Send us your raw videos, podcasts or long-form content.
-        </p>
-      </div>
 
       <div class="process-item">
-        <span>02</span>
-        <h3>We Edit</h3>
+
+        <span>
+          01
+        </span>
+
+        <h3>
+          Send Footage
+        </h3>
+
         <p>
-          Our editors transform your footage into engaging clips.
+
+          Send us your raw videos, podcasts or
+          long-form content.
+
         </p>
+
       </div>
 
-      <div class="process-item">
-        <span>03</span>
-        <h3>Review</h3>
-        <p>
-          Review the edits and request any changes you need.
-        </p>
-      </div>
 
       <div class="process-item">
-        <span>04</span>
-        <h3>Post</h3>
+
+        <span>
+          02
+        </span>
+
+        <h3>
+          We Edit
+        </h3>
+
         <p>
-          Download your finished clips and start posting.
+
+          We transform your footage into engaging
+          short-form clips.
+
         </p>
+
       </div>
+
+
+      <div class="process-item">
+
+        <span>
+          03
+        </span>
+
+        <h3>
+          Review
+        </h3>
+
+        <p>
+
+          Review the edits and request any changes
+          you need.
+
+        </p>
+
+      </div>
+
+
+      <div class="process-item">
+
+        <span>
+          04
+        </span>
+
+        <h3>
+          Post
+        </h3>
+
+        <p>
+
+          Download your finished clips and start
+          posting.
+
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- PRICING -->
+  <!-- =========================
+       PRICING
+  ========================= -->
 
   <section id="pricing">
 
     <div class="section-heading">
-      <span>Packages</span>
+
+      <span>
+        Packages
+      </span>
 
       <h2>
         Choose your content volume.
       </h2>
 
       <p>
-        These are starter prices — change them to whatever
-        works for your business.
+
+        Flexible packages for businesses and creators
+        who want consistent short-form content.
+
       </p>
+
     </div>
+
 
     <div class="pricing">
 
+
+      <!-- STARTER -->
+
       <div class="price-card">
 
-        <h3>Starter</h3>
+        <h3>
+          Starter
+        </h3>
 
         <div class="price">
+
           €99
-          <small>/ month</small>
+
+          <small>
+            / month
+          </small>
+
         </div>
 
         <ul>
-          <li>5 short-form videos</li>
-          <li>Captions</li>
-          <li>Basic effects</li>
-          <li>1 revision per clip</li>
+
+          <li>
+            5 short-form videos
+          </li>
+
+          <li>
+            Captions
+          </li>
+
+          <li>
+            Basic effects
+          </li>
+
+          <li>
+            1 revision per clip
+          </li>
+
         </ul>
 
-        <a href="#contact" class="button button-secondary">
+        <a
+          href="https://www.instagram.com/vyr_omedia/"
+          class="button button-secondary"
+        >
           Get Started
         </a>
 
       </div>
 
+
+      <!-- GROWTH -->
 
       <div class="price-card featured">
 
-        <h3>Growth</h3>
+        <div class="popular">
+          MOST POPULAR
+        </div>
+
+        <h3>
+          Growth
+        </h3>
 
         <div class="price">
+
           €199
-          <small>/ month</small>
+
+          <small>
+            / month
+          </small>
+
         </div>
 
         <ul>
-          <li>12 short-form videos</li>
-          <li>Dynamic captions</li>
-          <li>Advanced effects</li>
-          <li>2 revisions per clip</li>
+
+          <li>
+            12 short-form videos
+          </li>
+
+          <li>
+            Dynamic captions
+          </li>
+
+          <li>
+            Advanced effects
+          </li>
+
+          <li>
+            2 revisions per clip
+          </li>
+
         </ul>
 
-        <a href="#contact" class="button button-primary">
+        <a
+          href="https://www.instagram.com/vyr_omedia/"
+          class="button button-primary"
+        >
           Get Started
         </a>
 
       </div>
 
+
+      <!-- PRO -->
 
       <div class="price-card">
 
-        <h3>Pro</h3>
+        <h3>
+          Pro
+        </h3>
 
         <div class="price">
+
           €349
-          <small>/ month</small>
+
+          <small>
+            / month
+          </small>
+
         </div>
 
         <ul>
-          <li>25 short-form videos</li>
-          <li>Premium editing</li>
-          <li>Custom graphics</li>
-          <li>Priority delivery</li>
+
+          <li>
+            25 short-form videos
+          </li>
+
+          <li>
+            Premium editing
+          </li>
+
+          <li>
+            Custom graphics
+          </li>
+
+          <li>
+            Priority delivery
+          </li>
+
         </ul>
 
-        <a href="#contact" class="button button-secondary">
+        <a
+          href="https://www.instagram.com/vyr_omedia/"
+          class="button button-secondary"
+        >
           Get Started
         </a>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section id="contact">
 
@@ -830,8 +1443,10 @@
       </h2>
 
       <p>
+
         Have footage that needs turning into content?
         Let's make something people actually want to watch.
+
       </p>
 
       <br>
@@ -848,19 +1463,32 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
     <div>
-      © 2026 <strong>vry_omedia</strong>
+
+      © 2026
+      <strong>
+        vry_omedia
+      </strong>
+
     </div>
 
     <div>
+
       Short-form content editing.
+
     </div>
 
   </footer>
+
+
+</body>
+</html>
 
 </body>
 </html>
