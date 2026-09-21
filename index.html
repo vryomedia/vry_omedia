@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 
   <meta
     name="description"
-    content="vry_omedia turns your content into high-impact short-form videos for TikTok, Instagram Reels and YouTube Shorts."
+    content="vry_omedia turns your content into scroll-stopping short-form videos."
   >
 
   <style>
@@ -277,7 +278,7 @@
     }
 
     /* =========================
-       WHAT WE CREATE
+       WHAT WE CAN CREATE
     ========================= */
 
     .create-grid {
@@ -297,24 +298,75 @@
     .create-card:hover {
       transform: translateY(-6px);
       border-color: #49318a;
-      background: #0e0e0e;
     }
 
     .create-number {
       color: #8b5cf6;
       font-weight: 800;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .create-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 12px;
     }
 
     .create-card p {
       color: #888;
       line-height: 1.6;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       DEMO VIDEO
+    ========================= */
+
+    .demo-video {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px;
+      background: #0b0b0b;
+      border: 1px solid #1b1b1b;
+      border-radius: 18px;
+    }
+
+    .demo-label {
+      display: inline-block;
+      color: #8b5cf6;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .demo-video h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .demo-video p {
+      color: #888;
+      line-height: 1.6;
+      font-size: 0.9rem;
+      max-width: 520px;
+      margin: 0 auto 25px;
+    }
+
+    .demo-video video {
+      width: 100%;
+      max-height: 700px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    .demo-note {
+      display: block;
+      margin-top: 15px;
+      color: #666;
+      font-size: 0.75rem;
     }
 
     /* =========================
@@ -323,39 +375,25 @@
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
     .why-card {
+      padding: 30px;
       background: #0b0b0b;
       border: 1px solid #1b1b1b;
-      padding: 32px;
       border-radius: 16px;
-      transition: 0.3s;
-    }
-
-    .why-card:hover {
-      transform: translateY(-5px);
-      border-color: #49318a;
-      background: #0e0e0e;
-    }
-
-    .why-number {
-      color: #8b5cf6;
-      font-weight: 800;
-      margin-bottom: 25px;
     }
 
     .why-card h3 {
-      font-size: 1.25rem;
       margin-bottom: 12px;
     }
 
     .why-card p {
       color: #888;
-      line-height: 1.7;
-      font-size: 0.95rem;
+      line-height: 1.6;
+      font-size: 0.92rem;
     }
 
     /* =========================
@@ -392,11 +430,17 @@
        PRICING
     ========================= */
 
-    .pricing-label {
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 25px;
+    .pricing-title {
+      margin-bottom: 30px;
+    }
+
+    .pricing-title h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .pricing-title p {
+      color: #888;
     }
 
     .pricing {
@@ -423,15 +467,13 @@
       position: absolute;
       top: 18px;
       right: 18px;
-
       background: #7c3aed;
       color: #fff;
-
       padding: 6px 10px;
       border-radius: 20px;
-
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 800;
+      letter-spacing: 0.5px;
     }
 
     .price-card h3 {
@@ -461,47 +503,6 @@
       content: "✓";
       color: #8b5cf6;
       margin-right: 10px;
-    }
-
-    .once-off-title {
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 25px;
-    }
-
-    /* =========================
-       HOW TO GET STARTED
-    ========================= */
-
-    .getting-started {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .start-card {
-      background: #0b0b0b;
-      border: 1px solid #1b1b1b;
-      padding: 28px;
-      border-radius: 16px;
-    }
-
-    .start-number {
-      color: #8b5cf6;
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 25px;
-    }
-
-    .start-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .start-card p {
-      color: #888;
-      line-height: 1.6;
-      font-size: 0.9rem;
     }
 
     /* =========================
@@ -570,16 +571,12 @@
 
       .services,
       .create-grid,
+      .why-grid,
       .pricing {
         grid-template-columns: 1fr;
       }
 
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .process,
-      .getting-started {
+      .process {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -591,6 +588,10 @@
         padding: 80px 6%;
       }
 
+      .demo-video {
+        padding: 20px;
+      }
+
       footer {
         flex-direction: column;
         gap: 10px;
@@ -599,8 +600,7 @@
 
     @media (max-width: 500px) {
 
-      .process,
-      .getting-started {
+      .process {
         grid-template-columns: 1fr;
       }
 
@@ -611,6 +611,10 @@
 
       .hero p {
         font-size: 1rem;
+      }
+
+      .demo-video video {
+        max-height: 600px;
       }
     }
   </style>
@@ -624,10 +628,17 @@
     <a href="#" class="logo">vry_<span>omedia</span></a>
 
     <div class="nav-links">
-      <a href="#work">What We Create</a>
+      <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-button">Get Started</a>
+
+      <a
+        href="https://www.instagram.com/vyr_omedia/"
+        target="_blank"
+        class="nav-button"
+      >
+        Get Started
+      </a>
     </div>
   </nav>
 
@@ -669,7 +680,7 @@
 
       </div>
 
-      <p style="margin-top: 25px; font-size: 0.85rem; color: #666;">
+      <p style="margin-top:25px;font-size:0.85rem;color:#666;">
         Built for businesses, creators & personal brands.
       </p>
 
@@ -714,7 +725,6 @@
 
       </div>
 
-
       <div class="service-card">
 
         <div class="service-number">02</div>
@@ -722,12 +732,11 @@
         <h3>Captions & Graphics</h3>
 
         <p>
-          Dynamic captions, visual elements and clean effects
+          Dynamic captions, motion graphics and visual elements
           that keep viewers engaged.
         </p>
 
       </div>
-
 
       <div class="service-card">
 
@@ -747,21 +756,22 @@
   </section>
 
 
-  <!-- WHAT WE CREATE -->
+  <!-- WHAT WE CAN CREATE -->
 
   <section id="work">
 
     <div class="section-heading">
 
-      <span>What we create</span>
+      <span>What we can create</span>
 
       <h2>
-        Content for every type of brand.
+        Content for every feed.
       </h2>
 
       <p>
-        Whether you're building a business, personal brand or
-        social media presence, we turn your footage into content.
+        From business promotions to personal brands,
+        we turn your existing footage into ready-to-post
+        short-form content.
       </p>
 
     </div>
@@ -781,7 +791,6 @@
 
       </div>
 
-
       <div class="create-card">
 
         <div class="create-number">02</div>
@@ -789,12 +798,11 @@
         <h3>Podcast & Expert Clips</h3>
 
         <p>
-          Turn podcasts, interviews and long conversations into
-          multiple short clips that showcase your expertise.
+          Turn podcasts, interviews and long conversations
+          into multiple short clips that showcase your expertise.
         </p>
 
       </div>
-
 
       <div class="create-card">
 
@@ -809,7 +817,6 @@
 
       </div>
 
-
       <div class="create-card">
 
         <div class="create-number">04</div>
@@ -823,7 +830,6 @@
 
       </div>
 
-
       <div class="create-card">
 
         <div class="create-number">05</div>
@@ -836,7 +842,6 @@
         </p>
 
       </div>
-
 
       <div class="create-card">
 
@@ -856,22 +861,71 @@
   </section>
 
 
+  <!-- DEMO VIDEO -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <span>Sample work</span>
+
+      <h2>
+        See what we can create.
+      </h2>
+
+      <p>
+        This is a demo edit showing the type of short-form
+        content we can create.
+      </p>
+
+    </div>
+
+    <div class="demo-video">
+
+      <div class="demo-label">
+        DEMO EDIT
+      </div>
+
+      <h3>
+        Sample Short-Form Edit
+      </h3>
+
+      <p>
+        A sample edit created by vry_omedia.
+      </p>
+
+      <video
+        controls
+        playsinline
+        preload="metadata"
+      >
+        <source src="demo-edit.mp4" type="video/mp4">
+
+        Your browser does not support the video player.
+      </video>
+
+      <span class="demo-note">
+        Sample work by vry_omedia
+      </span>
+
+    </div>
+
+  </section>
+
+
   <!-- WHY VRY_OMEDIA -->
 
   <section>
 
     <div class="section-heading">
 
-      <span>Why vry_omedia?</span>
+      <span>Why vry_omedia</span>
 
       <h2>
-        Built around your content.
+        Simple editing.
+        <br>
+        Better content.
       </h2>
-
-      <p>
-        Simple editing, clear pricing and a consistent approach
-        to turning your footage into short-form content.
-      </p>
 
     </div>
 
@@ -879,55 +933,33 @@
 
       <div class="why-card">
 
-        <div class="why-number">01</div>
-
-        <h3>Built for Short-Form</h3>
+        <h3>Built for short-form</h3>
 
         <p>
-          Every edit is designed specifically for TikTok,
-          Instagram Reels and YouTube Shorts.
+          Every edit is created with short-form platforms
+          in mind, from pacing and captions to the opening hook.
         </p>
 
       </div>
 
-
       <div class="why-card">
 
-        <div class="why-number">02</div>
-
-        <h3>Simple Pricing</h3>
+        <h3>Consistent content</h3>
 
         <p>
-          No confusing editing tiers. You pay based on how many
-          videos you need, while keeping the same editing style.
+          Turn your existing footage into a steady supply
+          of content without having to edit everything yourself.
         </p>
 
       </div>
 
-
       <div class="why-card">
 
-        <div class="why-number">03</div>
-
-        <h3>Consistent Content</h3>
+        <h3>Simple process</h3>
 
         <p>
-          Turn your footage into a steady stream of content instead
-          of only posting whenever you have time.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-number">04</div>
-
-        <h3>Built Around Your Brand</h3>
-
-        <p>
-          Keep a consistent editing style across your videos so
-          your content feels recognizable.
+          Send your footage, let us edit it, review the finished
+          clips and get them ready to post.
         </p>
 
       </div>
@@ -965,7 +997,6 @@
 
       </div>
 
-
       <div class="process-item">
 
         <span>02</span>
@@ -978,7 +1009,6 @@
 
       </div>
 
-
       <div class="process-item">
 
         <span>03</span>
@@ -986,11 +1016,10 @@
         <h3>Review</h3>
 
         <p>
-          Review your edits and request any changes you need.
+          Review the edits and request any changes you need.
         </p>
 
       </div>
-
 
       <div class="process-item">
 
@@ -1015,15 +1044,15 @@
 
     <div class="section-heading">
 
-      <span>Packages</span>
+      <span>Pricing</span>
 
       <h2>
         Choose your content volume.
       </h2>
 
       <p>
-        The editing stays consistent across every package.
-        The main difference is how many videos you receive.
+        Same editing quality across every package.
+        The difference is simply how many videos you need.
       </p>
 
     </div>
@@ -1031,8 +1060,14 @@
 
     <!-- MONTHLY -->
 
-    <div class="pricing-label">
-      Monthly
+    <div class="pricing-title">
+
+      <h3>Monthly</h3>
+
+      <p>
+        Ongoing content for businesses, creators and personal brands.
+      </p>
+
     </div>
 
     <div class="pricing">
@@ -1129,8 +1164,14 @@
 
     <!-- ONCE-OFF -->
 
-    <div class="once-off-title">
-      Once-off
+    <div class="pricing-title">
+
+      <h3>Once-off</h3>
+
+      <p>
+        Need a batch of videos without a monthly commitment?
+      </p>
+
     </div>
 
     <div class="pricing">
@@ -1141,7 +1182,7 @@
 
         <div class="price">
           €40
-          <small> once-off</small>
+          <small>once-off</small>
         </div>
 
         <ul>
@@ -1169,7 +1210,7 @@
 
         <div class="price">
           €75
-          <small> once-off</small>
+          <small>once-off</small>
         </div>
 
         <ul>
@@ -1197,7 +1238,7 @@
 
         <div class="price">
           €130
-          <small> once-off</small>
+          <small>once-off</small>
         </div>
 
         <ul>
@@ -1215,86 +1256,6 @@
         >
           Get Started
         </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- HOW TO GET STARTED -->
-
-  <section>
-
-    <div class="section-heading">
-
-      <span>Get started</span>
-
-      <h2>
-        From footage to finished content.
-      </h2>
-
-      <p>
-        Getting started with vry_omedia is simple.
-      </p>
-
-    </div>
-
-    <div class="getting-started">
-
-      <div class="start-card">
-
-        <div class="start-number">01</div>
-
-        <h3>Choose a Package</h3>
-
-        <p>
-          Pick the monthly or once-off package that matches
-          the amount of content you need.
-        </p>
-
-      </div>
-
-
-      <div class="start-card">
-
-        <div class="start-number">02</div>
-
-        <h3>Message Us</h3>
-
-        <p>
-          Send us a message on Instagram and tell us what
-          type of content you want to create.
-        </p>
-
-      </div>
-
-
-      <div class="start-card">
-
-        <div class="start-number">03</div>
-
-        <h3>Send Your Footage</h3>
-
-        <p>
-          Send over your raw footage, podcasts or long-form
-          content for us to work with.
-        </p>
-
-      </div>
-
-
-      <div class="start-card">
-
-        <div class="start-number">04</div>
-
-        <h3>Get Your Clips</h3>
-
-        <p>
-          Receive your finished short-form videos ready
-          to post across your social platforms.
-        </p>
 
       </div>
 
