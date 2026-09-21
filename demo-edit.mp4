@@ -1,1 +1,3 @@
-
+<video controls autoplay muted playsinline>
+  <source src="demo-edit.mp4" type="video/mp4">
+</video>
